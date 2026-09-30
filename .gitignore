@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Datos locales: audio, stems, modelos y base de datos
+backend/data/
+backend/.env
+
+# Frontend
+node_modules/
+frontend/dist/
+*.local
+
+# Samples propios (se guardan fuera de git; solo se versiona el README)
+samples/*
+!samples/README.md
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tsbuildinfo

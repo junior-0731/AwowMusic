@@ -1,0 +1,13 @@
+[project]
+name = "awowmusic-backend"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not gpu'"
+markers = ["gpu: usa la GPU y descarga modelos reales (pytest -m gpu)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"

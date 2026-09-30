@@ -1,0 +1,26 @@
+# PyTorch con CUDA 13.0 (RTX 4070, driver >= 580). Se fija la variante +cu130 para que
+# pip nunca la reemplace por la versiÃ³n de PyPI, que solo usa CPU.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.0+cu130
+torchvision==0.29.0+cu130
+
+# SeparaciÃ³n (Demucs, RoFormer) con la librerÃ­a de UVR
+audio-separator[gpu]==0.47.0
+onnxruntime-gpu==1.30.0
+
+# API
+fastapi==0.142.1
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+pydantic-settings==2.15.0
+
+# Audio
+soundfile==0.14.0
+numpy==2.4.6
+librosa==1.0.0
+# audio-separator lo importa pero librosa 1.0 ya no lo instala
+audioread==3.1.0
+# numba 0.67 trae una DLL (_box.pyd) que Smart App Control de Windows bloquea por falta de
+# reputaciÃ³n; 0.66 carga sin problemas.
+numba==0.66.0
+llvmlite==0.48.0
